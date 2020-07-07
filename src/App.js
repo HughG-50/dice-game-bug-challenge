@@ -3,7 +3,7 @@ import { Game } from './Game';
 import { Interface } from './Interface';
 import { AIresult } from './AIresult';
 import { YourResult } from './YourResult';
-import { Ranking } from './Ranking';
+import { Ranking }  from './Ranking';
 import './App.css';
 
 class App extends React.Component {
@@ -11,7 +11,7 @@ class App extends React.Component {
   losses = [];
   wins = [];
   state = {
-    game: 0,
+    games: 0,
     yourChoice: '',
     AIChoice: null,
     one:
@@ -36,7 +36,7 @@ class App extends React.Component {
   startGame = () => {
     this.setState({
       yourChoice: Math.floor(Math.random() * 6) + 1,
-      games: this.state.games,
+      games: this.state.games + 1,
     });
 
     this.AIChoice();
